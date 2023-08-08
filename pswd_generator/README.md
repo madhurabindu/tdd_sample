@@ -3,6 +3,7 @@
 We need a password generator which generates one time password.
 
 The password is for children between the age 6-10 years and hence need to be simple.
+
 The rules of pswd generator to make it simple are
 1. The password should be 6 characters in length
 1. Should be only alphabets, not include special characters or numbers
