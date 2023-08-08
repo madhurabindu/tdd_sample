@@ -52,9 +52,10 @@ Establish quality parameters:
 Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
 
 Start Test-driven approach
+
 Stage 1:
 1. Write the smallest possible failing test: give input `any name`. assert output to be `the pswd starts with first letter of the name`.
-1. Write the minimum amount of code that'll make it pass.
+1. Write the minimum amount of code that'll make it pass. Do not add additional code, though you know additional requirement. 
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
 
 Stage 2:
