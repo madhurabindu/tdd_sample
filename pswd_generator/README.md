@@ -27,7 +27,7 @@ Childs First name
 
 An auto generated 6 letter password that adheres to set of rule
 
-### Example output for every Rules 
+### Example output for every Rule 
 Let us consider examples for child name: Nathan and Annie
 
 | No | Rule  | Example | Error Example |
