@@ -23,7 +23,7 @@ Childs First name
 
 ### Functionality
 
-An auto generated 6 letter password that adheres to set of rules
+An auto generated 6 letter password that adheres to set of rule
 
 ### Example output for every Rules 
 1. The password should be 6 characters in length 
