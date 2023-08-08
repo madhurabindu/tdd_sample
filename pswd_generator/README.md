@@ -26,40 +26,19 @@ Childs First name
 An auto generated 6 letter password that adheres to set of rule
 
 ### Example output for every Rules 
-1. The password should be 6 characters in length 
-```
-Ex: CanMin
-```
-2. The password should have combination of 2 words, each of length 3, two words should not be same
+Let us consider examples for child name: Nathan and Annie
 
-3. The password should be only alphabets, not include special characters or numbers
-```
-Ex:PinTin 
-Error Password: Car2D#
-```
-4. The password should start with the first letter of the given child's name
-5. If the childs name starts with a consonant, the password would be (consonant-vowel-consonent)(consonant-vowel-consonent)
-6. If the childs name starts with a vowel, the password would be (vowel-vowel/consonant-vowel/consonant)(consonant-vowel-consonent)
-```
-Ex: Childs Name: Nathon 
-Possible Password: NetPut, NodFor, NewBuk
-Ex: Childs name: Annie
-Possible password: AntMan, AteMud, AxeLan
-```
-7. 2 consecutive consonants should not be same
-```
-Ex: Childs Name: Nathon 
-Error Password: NetTuk
-Ex: Childs name: Annie
-Error password: AndDad
-```
-8. The password should be in pascal casing  
-```
-Ex: As above
-Error Password: pasNot
-```
-9. The password generated should not be repeated for atleast 100 times or within a week which ever comes first
-
+| No | Rule  | Example | Error Example |
+| :--|:----------------------| :-----|:-----|
+| 1 | The password should be 6 characters in length | CanMin | CanNotDoThis |
+| 2 | The password should have combination of 2 words, each of length 3, two words should not be same | GudFud | GudGud |
+| 3 | The password should be only alphabets, not include special characters or numbers | PinTim | Car2#D |
+| 4 | The password should start with the first letter of the given child's name | NorFox | AlePet | 
+| 5 | If the childs name starts with a consonant, the password would be (consonant-vowel-consonent)(consonant-vowel-consonent) | NetPut, NodFor, NewBuk | NdaFee| 
+| 6 | If the childs name starts with a vowel, the password would be (vowel-vowel/consonant-vowel/consonant)(consonant-vowel-consonent) |AntMan, AteMud, AxeLan | AerAir| 
+| 7 | 2 consecutive consonants should not be same | See above |NetTuk, AndDad | 
+| 8 | The password should be in pascal casing | See above | pasNot, rongon,Notsoo | 
+| 9 | The password generated should not be repeated for atleast 100 times or within a week which ever comes first | | | 
 
 ## Tasks
 
