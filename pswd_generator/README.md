@@ -9,8 +9,8 @@ The rules of pswd generator to make it simple are
 1. Should be only alphabets, not include special characters or numbers
 1. The password should start with the first letter of the given child's name
 1. The password should have combination of 2 words, each of length 3, two words should not be same
-1. If the childs name starts with a consonant, the password would be (consonant-vowel-consonent)(consonant-vowel-consonent)
-1. If the childs name starts with a vowel, the password would be (vowel-consonant-vowel)(consonant-vowel-consonent)
+1. If the childs name starts with a consonant, the password would be (consonant-vowel-consonant)(consonant-vowel-consonant)
+1. If the childs name starts with a vowel, the password would be (vowel-consonant-vowel)(consonant-vowel-consonant)
 1. 2 consecutive consonants should not be same
 1. The password should be in pascal casing for the 2 words joined to make the password
 1. The password generated should not be repeated for atleast 100 times or within a week which ever comes first
@@ -27,7 +27,7 @@ Childs First name
 
 An auto generated 6 letter password that adheres to set of rule
 
-### Example output for every Rules 
+### Example output for every Rule 
 Let us consider examples for child name: Nathan and Annie
 
 | No | Rule  | Example | Error Example |
@@ -36,8 +36,8 @@ Let us consider examples for child name: Nathan and Annie
 | 2 | The password should have combination of 2 words, each of length 3, two words should not be same | GudFud | GudGud |
 | 3 | The password should be only alphabets, not include special characters or numbers | PinTim | Car2#D |
 | 4 | The password should start with the first letter of the given child's name |  -- | -- | 
-| 5 | If the childs name starts with a consonant, the password would be (consonant-vowel-consonent)(consonant-vowel-consonent) | NetPut, NodFor, NewBuk | NdaFee| 
-| 6 | If the childs name starts with a vowel, the password would be (vowel-vowel/consonant-vowel/consonant)(consonant-vowel-consonent) |ApeMan, AteMud, AxeLan | AerAir, AxlPtn| 
+| 5 | If the childs name starts with a consonant, the password would be (consonant-vowel-consonant)(consonant-vowel-consonant) | NetPut, NodFor, NewBuk | NdaFee| 
+| 6 | If the childs name starts with a vowel, the password would be (vowel-vowel/consonant-vowel/consonant)(consonant-vowel-consonant) |ApeMan, AteMud, AxeLan | AerAir, AxlPtn| 
 | 7 | 2 consecutive consonants should not be same | See above |NetTuk, AndDad | 
 | 8 | The password should be in pascal casing | See above | pasNot, rongon,Notsoo | 
 | 9 | The password generated should not be repeated for atleast 100 times or within a week which ever comes first | -- | -- | 
