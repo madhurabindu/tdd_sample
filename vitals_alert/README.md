@@ -72,7 +72,7 @@ SPO2: 90
 Temp: 102
 ```
 Should return
-The input patientid received along with indications, criticality and underlying issue from row 9 of the table above.
+The indications, criticality and underlying issue from row 9 of the table above along with patient id received as input.
 
 ## Tasks
 
