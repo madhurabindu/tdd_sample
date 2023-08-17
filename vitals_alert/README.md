@@ -14,29 +14,30 @@ Following is the table describing the vitals and and their ranges
 
 | Vitals | Low  | Normal | Moderate | High |
 | :-- |:------- | :----- |:----- |:------|
-| Heart Rate (HR) | < 40 | 60 - 100 | 40-60 or 100-120 | > 120|
-| Respiratory Rate (RR) | < 10 | 12 - 20 | 10-12 or 20-30 | > 30 |
+| Heart Rate (HR) | < 40 | 60-100 | 40-60 or 100-120 | > 120|
+| Respiratory Rate (RR) | < 10 | 12-20 | 10-12 or 20-30 | > 30 |
 | Peripheral Oxygen Saturation (SpO2) | < 92 | 98-100 | 92-98 | - |
-| Temperature (Temp) | < 95 C | 97 C - 99 C | 95 C - 97 C | > 104 C |
-|  |  |  | or 99 C - 102 C | |
+| Temperature (Temp) in C | < 95 | 97-99 | 95-97 or 99-102 | > 104 |
 
+**The combinations of vitals in different ranges could give indication of underlying issue** 
 
-The combinations of vitals in different ranges could give indication of underlying issue
-|No |HR           |RR           |SPO2|Temp         |Indication                                                               |Criticality|Underlying issue                                                                             |
-|:--|:------------|:------------|:---|:------------|:------------------------------------------------------------------------|:----------:|:--------------------------------------------------------------------------------------------|
-|1  |Moderate     |-            |-   |Moderate     |Fever, systemic infection                                                |Medium     |Indicates a possible infection, further assessment needed                                    |
-|2  |-            |Moderate     |Low |-            |Respiratory distress, possible lung or heart issues                      |High       | Indicates compromised oxygenation, immediate attention required                             |
-|3  |Moderate     |Moderate     |-   |-            | Physical stress, anxiety, or pain                                       |Low        |Could be due to various factors, monitoring may be needed                                    |
-|4  |-            |-            |Low |Moderate     |Severe infection or respiratory compromise                               |High       | Indicates potentially serious condition, urgent medical attention necessary                 |
-|5  |Moderate     |-            |Low |-            | Cardiovascular or respiratory issue affecting oxygen delivery           |Medium     |Requires investigation, potential need for intervention                                      |
-|6  |Moderate/High|Moderate/High|-   |Moderate/High|Significant stress on the body, potential infection                      |Medium/High|Suggests systemic response, medical evaluation advised                                       |
-|7  |-            |Moderate     |Low |High         |Acute respiratory distress and possible infection                        |High       | Indicates serious respiratory compromise, urgent medical attention needed                   |
-|8  |Moderate     |Moderate     |Low |-            |Severe respiratory distress, compromised oxygenation, and physical stress|High       | Indicates serious respiratory and cardiovascular compromise, urgent medical attention needed|
-|9  |Moderate/High|Moderate/High|Low |Moderate/High|Systemic stress, possible infection, and compromised oxygenation         |High       | Suggests a combination of serious factors, urgent medical attention necessary               |
-|10 |High/Low     |-            |-  |-            |potential cardiovascular issues                                          |High       |potential cardiovascular issues, such as arrhythmias, heart failure, or shock              |
-|11 |-            |High/Low     |-  |-            | severe respiratory distress                                             |High       | lung infections, pneumonia, or respiratory failure                                          |
-|12 |-            |-            |Low|-            |inadequate oxygenation of the blood                                      |High       |lung or heart problems                                                                       |
-|13 |-            |-            |-  |High/Low     |Severe systemic issue                                                    |High       |severe infections, heatstroke, hypothermia, or other serious underlying medical conditions. |
+### Vitals
+
+|No |HR    |RR    |SPO2|Temp |Indication                                                               |Criticality|Underlying issue                                                                             |
+|:--|:-----|:-----|:---|:----|:------------------------------------------------------------------------|:----------:|:-------------------------------------------------------------------------------------------|
+|1  |M     |-     |-   |M    |Fever, systemic infection                                                |Medium     |Indicates a possible infection, further assessment needed                                    |
+|2  |-     |M     |L   |-    |Respiratory distress, possible lung or heart issues                      |High       | Indicates compromised oxygenation, immediate attention required                             |
+|3  |M     |M     |-   |-    |Physical stress, anxiety, or pain                                        |Low        |Could be due to various factors, monitoring may be needed                                    |
+|4  |-     |-     |L   |M    |Severe infection or respiratory compromise                               |High       | Indicates potentially serious condition, urgent medical attention necessary                 |
+|5  |M     |-     |L   |-    |Cardiovascular or respiratory issue affecting oxygen delivery            |Medium     |Requires investigation, potential need for intervention                                      |
+|6  |M/H   |M/H   |-   |M/H  |Significant stress on the body, potential infection                      |Medium/High|Suggests systemic response, medical evaluation advised                                       |
+|7  |-     |M     |L   |H    |Acute respiratory distress and possible infection                        |High       | Indicates serious respiratory compromise, urgent medical attention needed                   |
+|8  |M     |M     |L   |-    |Severe respiratory distress, compromised oxygenation, and physical stress|High       | Indicates serious respiratory and cardiovascular compromise, urgent medical attention needed|
+|9  |M/H   |M/H   |L   |M/H  |Systemic stress, possible infection, and compromised oxygenation         |High       | Suggests a combination of serious factors, urgent medical attention necessary               |
+|10 |L/H   |-     |-   |-    |Potential cardiovascular issues                                          |High       |potential cardiovascular issues, such as arrhythmias, heart failure, or shock                |
+|11 |-     |L/H   |-   |-    |Severe respiratory distress                                              |High       | lung infections, pneumonia, or respiratory failure                                          |
+|12 |-     |-     |L   |-    |Inadequate oxygenation of the blood                                      |High       |lung or heart problems                                                                       |
+|13 |-     |-     |-   |L/H  |Severe systemic issue                                                    |High       |severe infections, heatstroke, hypothermia, or other serious underlying medical conditions.  |
 
 Requirement is to develop a alerting system that given a vitals for a patient would give the indication and possible underlying issue.
 Note: a '-' in the table indicates the vital is either normal or not relevant for the assessment.
@@ -64,7 +65,7 @@ Criticality (Low, Medium, High)
 For example,
 Input  
 ```
-PatientID: 12485
+PatientID: 12345
 HR: 100
 RR: 30
 SPO2: 90
