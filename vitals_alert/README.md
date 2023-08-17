@@ -17,7 +17,7 @@ Following is the table describing the vitals and and their ranges
 | Heart Rate (HR) | < 40 | 60-100 | 40-60 or 100-120 | > 120|
 | Respiratory Rate (RR) | < 10 | 12-20 | 10-12 or 20-30 | > 30 |
 | Peripheral Oxygen Saturation (SpO2) | < 92 | 98-100 | 92-98 | - |
-| Temperature (Temp) in C | < 95 | 97-99 | 95-97 or 99-102 | > 104 |
+| Temperature (Temp) in C | < 95 | 97-99 | 95-97 or 99-104 | > 104 |
 
 **The combinations of vitals in different ranges could give indication of underlying issue** 
 
