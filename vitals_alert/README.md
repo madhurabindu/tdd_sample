@@ -76,7 +76,7 @@ The input patientid received along with indications, criticality and underlying 
 
 ## Tasks
 
-Establish quality parameters: 
+### Establish quality parameters: 
 
 - What is the maximum complexity (CCN) per function? _enter CCN and create corresponding yml in the `.github/workflows` folder
 - How many lines of duplicate code will you tolerate? _enter the number of lines and create corresponding yml in the `.github/workflows` folder
@@ -84,7 +84,7 @@ Establish quality parameters:
 
 Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
 
-Start Test-driven approach
+### Start Test-driven approach
 
 Step 1:
 1. Write the smallest possible failing test to assert the input PatientID is returned in output.
