@@ -32,32 +32,45 @@ The combinations of vitals in different ranges could give indication of underlyi
 |7  |-            |Moderate     |Low |High         |Acute respiratory distress and possible infection                        |High       | Indicates serious respiratory compromise, urgent medical attention needed                   |
 |8  |Moderate     |Moderate     |Low |-            |Severe respiratory distress, compromised oxygenation, and physical stress|High       | Indicates serious respiratory and cardiovascular compromise, urgent medical attention needed|
 |9  |Moderate/High|Moderate/High|Low |Moderate/High|Systemic stress, possible infection, and compromised oxygenation         |High       | Suggests a combination of serious factors, urgent medical attention necessary               |
+|10 |High/Low     |-            |-  |-            |potential cardiovascular issues                                          |High       |potential cardiovascular issues, such as arrhythmias, heart failure, or shock              |
+|11 |-            |High/Low     |-  |-            | severe respiratory distress                                             |High       | lung infections, pneumonia, or respiratory failure                                          |
+|12 |-            |-            |Low|-            |inadequate oxygenation of the blood                                      |High       |lung or heart problems                                                                       |
+|13 |-            |-            |-  |High/Low     |Severe systemic issue                                                    |High       |severe infections, heatstroke, hypothermia, or other serious underlying medical conditions. |
 
+Requirement is to develop a alerting system that given a vitals for a patient would give the indication and possible underlying issue.
 
 
 >### **DO NOT** jump into implementation! Read the example and the starting task below.
 
-## Example
 
 ### Input
-A sample text.
+Vitals for a patient and the patients PatientId 
 
 ### Functionality
 
-The task is to encode and decode the text using the algorithm mentioned above.
-Make sure the output of decoding is same as the original input text.
-Make sure the punctuations (if any) in the input text is retained after decoding back to original text.
-Note that the decoded text would always be in small case.
+The task is to assess the different vitals and their ranges to determine the underlying issue
 
 ### Output
 
-For example,
+The output should contain the following
+```
+PatientId
+Indication
+Assessment (Possible underlying issue)
+Criticality (Low, Medium, High)
+```
 
-| Ex | Input  | Ciphered text | Deciphered text |
-| :-- |:------- | :----- |:----- |
-| 1 | Quick frozen fox jumps over lazy dog | `q+#ck fr%z*n f%x j+mps %v*r l@zy d%g` | quick frozen fox jumps over lazy dog|
-| 2 | PREPARE TO MEET | `pr*p@r* t% m**t` | prepare to meet |
-| 3 | where is it the pigs live? | `*wh*r* #s #t th* p#gs l#v*?` | where is it the pigs live? |
+For example,
+Input  
+```
+PatientID: 12485
+HR: 100
+RR: 30
+SPO2: 90
+Temp: 102
+```
+Should return
+The input patientid received along with indications, criticality and underlying issue from row 9 of the table above.
 
 ## Tasks
 
@@ -70,11 +83,29 @@ Establish quality parameters:
 Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
 
 Start Test-driven approach
-
-1. Write the smallest possible failing test: give input `always act artfact`. assert output to be `@lw@ys @ct @rtf@ct`. 
+Step 1:
+1. Write the smallest possible failing test to assert the input PatientID is returned in output.
 1. Write the minimum amount of code that'll make it pass.
 1. Test with different input texts
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
 
-Repeat the above set of tasks to all conditions in the algorithm
+Step 2:
+1. Write the smallest possible failing test: give input `SPO2: 90`. assert criticality to  be `High`. 
+1. Write the minimum amount of code that'll make it pass.
+1. Test with different input texts
+1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
+
+Step 3: 
+1. Write the smallest possible failing test: give input `SPO2: 90`. assert indication to be `inadequate oxygenation of the blood`. 
+1. Write the minimum amount of code that'll make it pass.
+1. Test with different input texts
+1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
+
+Step 4: 
+1. Write the smallest possible failing test: give input `SPO2: 90`. assert assessment to be `severe infections, heatstroke, hypothermia, or other serious underlying medical conditions.`. 
+1. Write the minimum amount of code that'll make it pass.
+1. Test with different input texts
+1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
+ 
+Repeat the above set of tasks to all data in the table above.
 
