@@ -9,6 +9,7 @@ Health Monitoring Systems
 
 ## Purpose
 Monitoring of vitals and the combination of vitals being out of range can give early indication of an impending health issue
+
 Following is the table describing the vitals and and their ranges 
 
 | Vitals | Low  | Normal | Moderate | High |
@@ -22,7 +23,7 @@ Following is the table describing the vitals and and their ranges
 
 The combinations of vitals in different ranges could give indication of underlying issue
 |No |HR           |RR           |SPO2|Temp         |Indication                                                               |Criticality|Underlying issue                                                                             |
-|---|-------------|-------------|----|-------------|-------------------------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------|
+|:--|:------------|:------------|:---|:------------|:------------------------------------------------------------------------|:----------:|:--------------------------------------------------------------------------------------------|
 |1  |Moderate     |-            |-   |Moderate     |Fever, systemic infection                                                |Medium     |Indicates a possible infection, further assessment needed                                    |
 |2  |-            |Moderate     |Low |-            |Respiratory distress, possible lung or heart issues                      |High       | Indicates compromised oxygenation, immediate attention required                             |
 |3  |Moderate     |Moderate     |-   |-            | Physical stress, anxiety, or pain                                       |Low        |Could be due to various factors, monitoring may be needed                                    |
@@ -38,17 +39,17 @@ The combinations of vitals in different ranges could give indication of underlyi
 |13 |-            |-            |-  |High/Low     |Severe systemic issue                                                    |High       |severe infections, heatstroke, hypothermia, or other serious underlying medical conditions. |
 
 Requirement is to develop a alerting system that given a vitals for a patient would give the indication and possible underlying issue.
-
+Note: a '-' in the table indicates the vital is either normal or not relevant for the assessment.
 
 >### **DO NOT** jump into implementation! Read the example and the starting task below.
 
 
 ### Input
-Vitals for a patient and the patients PatientId 
+Vitals for a patient and the patient's PatientId 
 
 ### Functionality
 
-The task is to assess the different vitals and their ranges to determine the underlying issue
+The task is to understand the different vitals and their ranges to determine the underlying issue
 
 ### Output
 
@@ -86,25 +87,25 @@ Start Test-driven approach
 Step 1:
 1. Write the smallest possible failing test to assert the input PatientID is returned in output.
 1. Write the minimum amount of code that'll make it pass.
-1. Test with different input texts
+1. Test with different input 
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
 
 Step 2:
 1. Write the smallest possible failing test: give input `SPO2: 90`. assert criticality to  be `High`. 
 1. Write the minimum amount of code that'll make it pass.
-1. Test with different input texts
+1. Test with different input 
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
 
 Step 3: 
 1. Write the smallest possible failing test: give input `SPO2: 90`. assert indication to be `inadequate oxygenation of the blood`. 
 1. Write the minimum amount of code that'll make it pass.
-1. Test with different input texts
+1. Test with different input 
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
 
 Step 4: 
 1. Write the smallest possible failing test: give input `SPO2: 90`. assert assessment to be `severe infections, heatstroke, hypothermia, or other serious underlying medical conditions.`. 
 1. Write the minimum amount of code that'll make it pass.
-1. Test with different input texts
+1. Test with different input 
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
  
 Repeat the above set of tasks to all data in the table above.
